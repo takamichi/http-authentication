@@ -58,7 +58,7 @@ class BasicAuthentication extends HttpAuthentication implements MiddlewareInterf
      */
     private function parseHeader(string $header): ?array
     {
-        if (strpos($header, 'Basic') !== 0) {
+        if (strpos($header, 'Basic ') !== 0) {
             return null;
         }
 
